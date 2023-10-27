@@ -70,42 +70,26 @@ function Navbar() {
         >
           {navs.map((n) => {
             return (
-              <>
-                {n.type !== "page" && (
-                  <HashLink
-                    to={`/#${n.text}`}
-                    scroll={(el) =>
-                      el.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      })
-                    }
-                  >
-                    <Button
-                      key={n.text}
-                      variant='unstyled'
-                      transition='all .3s'
-                      _hover={{
-                        textShadow: "4px 4px yellow",
-                      }}
-                    >
-                      <Highlighted>{n.text}</Highlighted>
-                    </Button>
-                  </HashLink>
-                )}
-                {n.type === "page" && (
-                  <Button
-                    key={n.text}
-                    variant='unstyled'
-                    transition='all .3s'
-                    _hover={{
-                      textShadow: "4px 4px yellow",
-                    }}
-                  >
-                    <Highlighted>{n.text}</Highlighted>
-                  </Button>
-                )}
-              </>
+              <HashLink
+                to={n.type !== "page" ? `/#${n.text}` : `/${n.text}`}
+                scroll={(el) =>
+                  el.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  })
+                }
+              >
+                <Button
+                  key={n.text}
+                  variant='unstyled'
+                  transition='all .3s'
+                  _hover={{
+                    textShadow: "4px 4px yellow",
+                  }}
+                >
+                  <Highlighted>{n.text}</Highlighted>
+                </Button>
+              </HashLink>
             );
           })}
         </HStack>
