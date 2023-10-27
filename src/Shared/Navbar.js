@@ -18,19 +18,6 @@ function Navbar() {
     },
   ];
 
-  const navHandler = (to) => {
-    if (to === "portfolio") navigate(to);
-    else {
-      const scrollTo = document.getElementById(to);
-      const offset = 80;
-      const scrollPos = scrollTo.offsetTop - offset;
-      window.scrollTo({
-        top: scrollPos,
-        behavior: "smooth",
-      });
-    }
-  };
-
   const handleHome = () => {
     if (pathname !== "/") navigate("/");
     else window.scrollTo({ top: 0, behavior: "smooth" });

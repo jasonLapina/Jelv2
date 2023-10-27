@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Center,
-  Grid,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Grid, Heading, Text, VStack } from "@chakra-ui/react";
 import Highlighted from "../Shared/Highlighted";
 import Btn from "../Shared/Btn";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
