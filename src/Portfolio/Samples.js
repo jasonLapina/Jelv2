@@ -34,7 +34,7 @@ function Samples() {
                   eveniet optio ut deleniti architecto, nulla dignissimos ipsam
                   corporis facere enim inventore impedit!
                 </Text>
-                <Btn>View project</Btn>
+                <Btn>View sample</Btn>
               </Box>
               <Box
                 h='520px'
