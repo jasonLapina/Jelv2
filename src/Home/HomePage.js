@@ -1,4 +1,4 @@
-import { Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text, VStack, Image } from "@chakra-ui/react";
 import Btn from "../Shared/Btn";
 import Highlighted from "../Shared/Highlighted";
 import Contact from "./Contact";
@@ -13,18 +13,27 @@ function HomePage() {
         bgColor='var(--primary)'
         p='16px'
         pl='80px'
-        pb='160px'
       >
-        <Heading mt='120px'>
-          Hi there, it's Jel. <br />
-          I’m here to put <Highlighted>words to work.</Highlighted>
-        </Heading>
-        <Text maxW='600px' mb='40px' opacity='.6'>
-          I help e-commerce brands turn subscribers into paying customers and
-          brand loyalists by writing copy that is congruent with their branding,
-          conversion-focused, and community-driven.
-        </Text>
-        <Btn>See my work</Btn>
+        <Grid
+          pt='120px'
+          pb='80px'
+          alignItems='center'
+          gridTemplateColumns='1fr 1fr'
+        >
+          <Box>
+            <Heading mb='24px'>
+              Hi there, it's Jel. <br />
+              I’m here to put <Highlighted>words to work.</Highlighted>
+            </Heading>
+            <Text lineHeight='taller' maxW='600px' mb='40px' opacity='.6'>
+              I help e-commerce brands turn subscribers into paying customers
+              and brand loyalists by writing copy that is congruent with their
+              branding, conversion-focused, and community-driven.
+            </Text>
+            <Btn>See my work</Btn>
+          </Box>
+          <Image justifySelf='center' alignSelf='center' src='/hero.svg' />
+        </Grid>
       </VStack>
       <About />
       <Samples />
