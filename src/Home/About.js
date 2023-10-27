@@ -12,7 +12,7 @@ import Highlighted from "../Shared/Highlighted";
 
 function About() {
   return (
-    <Box>
+    <Box id='about'>
       <Grid px='40px' justifyItems='center' gridTemplateColumns='1fr 1fr'>
         <Box>
           <Heading mb='24px'>

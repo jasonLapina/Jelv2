@@ -11,6 +11,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./Shared/Layout";
 import HomePage from "./Home/HomePage";
+import Portfoliopage from "./Portfolio/Portfoliopage";
 
 const theme = extendTheme({
   fonts: {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfoliopage />,
       },
     ],
   },

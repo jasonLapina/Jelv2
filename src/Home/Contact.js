@@ -4,7 +4,7 @@ import Highlighted from "../Shared/Highlighted";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 function Contact() {
   return (
-    <Box p='16px' bgColor='var(--primary)'>
+    <Box id='contact' p='16px' bgColor='var(--primary)'>
       <VStack gap='40px' pb='160px'>
         <Heading lineHeight='taller' textAlign='center' mt='120px'>
           Ready to <Highlighted>level up</Highlighted> your marketing without

@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Highlighted from "../Shared/Highlighted";
 import Btn from "../Shared/Btn";
-import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 function Samples() {
   const samples = [
     { title: "Gassy", text: "", img: "/Gassy" },
@@ -23,7 +23,7 @@ function Samples() {
       <VStack gap='56px' align='normal' px='80px'>
         {samples.map((s) => {
           return (
-            <Grid overflow='hidden' gridTemplateColumns='6fr 4fr'>
+            <Grid key={s.title} overflow='hidden' gridTemplateColumns='6fr 4fr'>
               <Box justifySelf='center'>
                 <Text fontSize='32px' mb='24px'>
                   {s.title}
