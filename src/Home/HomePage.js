@@ -1,5 +1,6 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import Btn from "../Shared/Btn";
+import Highlighted from "../Shared/Highlighted";
 function HomePage() {
   return (
     <VStack
@@ -11,7 +12,7 @@ function HomePage() {
       pb='160px'
     >
       <Heading mt='120px'>
-        Hi, I'm Jelanie, Expert Copywriter with
+        Hi, It's Jel, Expert <Highlighted>Copywriter</Highlighted> with
         <br />
         an Excellent Track Record of Success
       </Heading>

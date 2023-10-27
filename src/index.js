@@ -1,11 +1,23 @@
+import "@fontsource/merriweather/300.css";
+import "@fontsource/merriweather/400.css";
+import "@fontsource/merriweather/700.css";
+import "@fontsource/merriweather/900.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import { ChakraProvider } from "@chakra-ui/react";
-import "./App.css";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import "./App.css";
 import Layout from "./Shared/Layout";
 import HomePage from "./Home/HomePage";
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Open Sans', serif`,
+    body: `'Merriweather', serif`,
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -22,7 +34,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <RouterProvider router={router} />
   </ChakraProvider>
 );
