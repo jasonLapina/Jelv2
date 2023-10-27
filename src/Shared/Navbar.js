@@ -1,6 +1,7 @@
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import Highlighted from "./Highlighted";
 import { useLocation, useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 function Navbar() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -10,6 +11,7 @@ function Navbar() {
     },
     {
       text: "portfolio",
+      type: "page",
     },
     {
       text: "contact",
@@ -66,19 +68,46 @@ function Navbar() {
           backdropBlur='10px'
           gap='24px'
         >
-          {navs.map((n) => (
-            <Button
-              onClick={() => navHandler(n.text)}
-              key={n.text}
-              variant='unstyled'
-              transition='all .3s'
-              _hover={{
-                textShadow: "4px 4px yellow",
-              }}
-            >
-              <Highlighted>{n.text}</Highlighted>
-            </Button>
-          ))}
+          {navs.map((n) => {
+            return (
+              <>
+                {n.type !== "page" && (
+                  <HashLink
+                    to={`/#${n.text}`}
+                    scroll={(el) =>
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                    }
+                  >
+                    <Button
+                      key={n.text}
+                      variant='unstyled'
+                      transition='all .3s'
+                      _hover={{
+                        textShadow: "4px 4px yellow",
+                      }}
+                    >
+                      <Highlighted>{n.text}</Highlighted>
+                    </Button>
+                  </HashLink>
+                )}
+                {n.type === "page" && (
+                  <Button
+                    key={n.text}
+                    variant='unstyled'
+                    transition='all .3s'
+                    _hover={{
+                      textShadow: "4px 4px yellow",
+                    }}
+                  >
+                    <Highlighted>{n.text}</Highlighted>
+                  </Button>
+                )}
+              </>
+            );
+          })}
         </HStack>
       </HStack>
     </Box>
