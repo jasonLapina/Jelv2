@@ -14,7 +14,7 @@ import HomePage from "./Home/HomePage";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Open Sans', serif`,
+    heading: `'Merriweather', serif`,
     body: `'Merriweather', serif`,
   },
 });

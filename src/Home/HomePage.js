@@ -12,15 +12,13 @@ function HomePage() {
       pb='160px'
     >
       <Heading mt='120px'>
-        Hi, It's Jel, Expert <Highlighted>Copywriter</Highlighted> with
-        <br />
-        an Excellent Track Record of Success
+        Hi there. It's Jel. <br />
+        I’m here to put <Highlighted>words to work.</Highlighted>
       </Heading>
-      <Text maxW='600px' mb='40px'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, minima
-        sapiente voluptatum placeat voluptates id deserunt necessitatibus eos
-        aspernatur, at dolor quas similique nobis commodi! Architecto, tempora
-        ut. Natus, error!
+      <Text maxW='600px' mb='40px' opacity='.6'>
+        I help e-commerce brands turn subscribers into paying customers and
+        brand loyalists by writing copy that is congruent with their branding,
+        conversion-focused, and community-driven.
       </Text>
       <Btn>see my work</Btn>
     </VStack>
