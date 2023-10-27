@@ -3,6 +3,7 @@ import Btn from "../Shared/Btn";
 import Highlighted from "../Shared/Highlighted";
 import Contact from "./Contact";
 import About from "./About";
+import Samples from "../Portfolio/Samples";
 function HomePage() {
   return (
     <VStack gap='120px' align='normal'>
@@ -26,6 +27,7 @@ function HomePage() {
         <Btn>See my work</Btn>
       </VStack>
       <About />
+      <Samples />
       <Contact />
     </VStack>
   );
