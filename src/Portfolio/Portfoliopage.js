@@ -61,7 +61,11 @@ function Portfoliopage() {
           <Grid
             columnGap='16px'
             rowGap='32px'
-            gridTemplateColumns='repeat(auto-fit,minmax(400px,1fr))'
+            justifyItems={{ base: "center", lg: "normal" }}
+            gridTemplateColumns={{
+              base: "1fr",
+              lg: "repeat(auto-fit,minmax(400px,1fr))",
+            }}
             mt='40px'
           >
             {samples.map((s) => (
@@ -121,7 +125,7 @@ function Portfoliopage() {
           <Grid
             columnGap='16px'
             rowGap='32px'
-            gridTemplateColumns='repeat(4,1fr)'
+            gridTemplateColumns={{ lg: "repeat(4,1fr)", base: "1fr" }}
             justifyItems='center'
             justifyContent='center'
             mt='40px'
