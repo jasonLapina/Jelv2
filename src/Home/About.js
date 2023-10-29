@@ -3,7 +3,6 @@ import {
   Grid,
   HStack,
   Heading,
-  Icon,
   Image,
   Link,
   Text,
@@ -13,7 +12,12 @@ import Highlighted from "../Shared/Highlighted";
 function About() {
   return (
     <Box id='about'>
-      <Grid px='40px' justifyItems='center' gridTemplateColumns='1fr 1fr'>
+      <Grid
+        px='40px'
+        justifyItems='center'
+        rowGap='40px'
+        gridTemplateColumns={{ lg: "1fr 1fr", base: "1fr" }}
+      >
         <Box>
           <Heading mb='24px'>
             A little about your <Highlighted>Copywriter</Highlighted>
@@ -25,11 +29,17 @@ function About() {
             <Highlighted>Apparel and Jewelry</Highlighted> ,{" "}
             <Highlighted>Sporting Goods</Highlighted>,{" "}
             <Highlighted>Food and Beverages </Highlighted>, and more! <br />
+          </Text>
+          <Text mt='16px' lineHeight='taller' maxW='500px' opacity='.7'>
             With each having their own brand personality and voice. The{" "}
             <Highlighted> only similarity</Highlighted>?{" "}
             <Highlighted>ME</Highlighted> .
           </Text>
-          <HStack gap='40px' mt='40px'>
+          <HStack
+            justify={{ base: "center", lg: "normal" }}
+            gap='40px'
+            mt='40px'
+          >
             <Link>
               <Image w='56px' aspectRatio='1/1' src='/gmail.svg' />
             </Link>

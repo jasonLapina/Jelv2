@@ -1,4 +1,12 @@
-import { Box, Grid, Heading, Text, VStack, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  Heading,
+  Text,
+  VStack,
+  Image,
+  Center,
+} from "@chakra-ui/react";
 import Btn from "../Shared/Btn";
 import Highlighted from "../Shared/Highlighted";
 import Contact from "./Contact";
@@ -32,7 +40,9 @@ function HomePage() {
               and brand loyalists by writing copy that is congruent with their
               branding, conversion-focused, and community-driven.
             </Text>
-            <Btn>See my work</Btn>
+            <Box mx='auto' w={{ base: "fit-content", lg: "full" }}>
+              <Btn>See my work</Btn>
+            </Box>
           </Box>
           <Image
             maxW={{ base: "400px", lg: "intrinsic" }}
