@@ -13,9 +13,6 @@ function Navbar() {
       text: "portfolio",
       type: "page",
     },
-    {
-      text: "contact",
-    },
   ];
 
   const handleHome = () => {
@@ -79,6 +76,24 @@ function Navbar() {
               </HashLink>
             );
           })}
+          <Button
+            variant='unstyled'
+            transition='all .3s'
+            _hover={{
+              textShadow: "4px 4px yellow",
+            }}
+            onClick={() => {
+              const scrollTo = document.getElementById("contact");
+              const offset = 40;
+              const scrollPos = scrollTo.offsetTop - offset;
+              window.scrollTo({
+                top: scrollPos,
+                behavior: "smooth",
+              });
+            }}
+          >
+            <Highlighted>contact</Highlighted>
+          </Button>
         </HStack>
       </HStack>
     </Box>
