@@ -15,7 +15,11 @@ function Samples() {
       <VStack gap='56px' align='normal' px='80px'>
         {samples.map((s) => {
           return (
-            <Grid key={s.title} overflow='hidden' gridTemplateColumns='6fr 4fr'>
+            <Grid
+              key={s.title}
+              overflow='hidden'
+              gridTemplateColumns={{ lg: "6fr 4fr", base: "1fr" }}
+            >
               <Box justifySelf='center'>
                 <Text fontSize='32px' mb='24px'>
                   {s.title}
@@ -26,7 +30,6 @@ function Samples() {
                   eveniet optio ut deleniti architecto, nulla dignissimos ipsam
                   corporis facere enim inventore impedit!
                 </Text>
-                <Btn>View sample</Btn>
               </Box>
               <Box
                 h='520px'
