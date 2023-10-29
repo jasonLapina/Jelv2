@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         path: "portfolio",
         element: (
           <Suspense fallback={<div />}>
-            <Portfoliopage />,
+            <Portfoliopage />
           </Suspense>
         ),
       },
