@@ -15,7 +15,12 @@ function Contact() {
         </Heading>
         <Btn>Let jel do the copy</Btn>
       </VStack>
-      <Text>&copy; JmgWrites.com</Text>
+      <Text
+        textAlign={{ base: "center", lg: "left" }}
+        mb={{ base: "16px", lg: "0" }}
+      >
+        &copy; JmgWrites.com
+      </Text>
       <Center>
         <Text
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

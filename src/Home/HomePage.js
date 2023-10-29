@@ -28,6 +28,7 @@ function HomePage() {
           alignItems='center'
           gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
           rowGap='64px'
+          columnGap='32px'
           justifyItems={{ base: "center", lg: "normal" }}
         >
           <Box>
@@ -45,7 +46,7 @@ function HomePage() {
             </Box>
           </Box>
           <Image
-            maxW={{ base: "400px", lg: "intrinsic" }}
+            maxW={{ base: "240px", lg: "full" }}
             justifySelf='center'
             alignSelf='center'
             src='/hero.svg'

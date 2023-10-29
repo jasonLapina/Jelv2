@@ -8,11 +8,11 @@ function Samples() {
     { title: "Sweet Dreams", text: "", img: "/SweetDreams" },
   ];
   return (
-    <Box px='80px'>
+    <Box px={{ lg: "80px", b: "0" }}>
       <Heading textAlign='center' mb='80px'>
         The Proof is in the <Highlighted>Portfolio</Highlighted>
       </Heading>
-      <VStack gap='56px' align='normal' px='80px'>
+      <VStack gap='56px' align='normal' px={{ lg: "80px", b: "0" }}>
         {samples.map((s) => {
           return (
             <Grid

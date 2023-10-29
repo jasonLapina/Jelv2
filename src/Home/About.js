@@ -13,7 +13,7 @@ function About() {
   return (
     <Box id='about'>
       <Grid
-        px='40px'
+        px={{ lg: "40px", b: "0" }}
         justifyItems='center'
         rowGap='40px'
         gridTemplateColumns={{ lg: "1fr 1fr", base: "1fr" }}
@@ -39,6 +39,7 @@ function About() {
             justify={{ base: "center", lg: "normal" }}
             gap='40px'
             mt='40px'
+            mb={{ base: "24px", lg: "" }}
           >
             <Link>
               <Image w='56px' aspectRatio='1/1' src='/gmail.svg' />
