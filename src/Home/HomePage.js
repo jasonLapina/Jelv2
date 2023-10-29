@@ -12,13 +12,15 @@ function HomePage() {
         align='normal'
         bgColor='var(--primary)'
         p='16px'
-        pl='80px'
+        pl={{ base: "16px", lg: "80px" }}
       >
         <Grid
           pt='120px'
           pb='80px'
           alignItems='center'
-          gridTemplateColumns='1fr 1fr'
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+          rowGap='64px'
+          justifyItems={{ base: "center", lg: "normal" }}
         >
           <Box>
             <Heading mb='24px'>
@@ -32,7 +34,12 @@ function HomePage() {
             </Text>
             <Btn>See my work</Btn>
           </Box>
-          <Image justifySelf='center' alignSelf='center' src='/hero.svg' />
+          <Image
+            maxW={{ base: "400px", lg: "intrinsic" }}
+            justifySelf='center'
+            alignSelf='center'
+            src='/hero.svg'
+          />
         </Grid>
       </VStack>
       <About />
