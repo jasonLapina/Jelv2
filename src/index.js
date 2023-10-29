@@ -3,7 +3,7 @@ import "@fontsource/merriweather/400.css";
 import "@fontsource/merriweather/700.css";
 import "@fontsource/merriweather/900.css";
 
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -11,7 +11,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Layout from "./Shared/Layout";
 import HomePage from "./Home/HomePage";
-import Portfoliopage from "./Portfolio/Portfoliopage";
+// import Portfoliopage from "./Portfolio/Portfoliopage";
+
+const Portfoliopage = lazy(() => import("./Portfolio/Portfoliopage"));
 
 const theme = extendTheme({
   fonts: {
@@ -31,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "portfolio",
-        element: <Portfoliopage />,
+        element: (
+          <Suspense fallback={<div />}>
+            <Portfoliopage />,
+          </Suspense>
+        ),
       },
     ],
   },
