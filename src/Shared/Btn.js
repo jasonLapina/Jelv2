@@ -1,7 +1,13 @@
 import { Box, Button } from "@chakra-ui/react";
 function Btn(props) {
   return (
-    <Box cursor='pointer' w='fit-content' role='group' pos='relative'>
+    <Box
+      cursor='pointer'
+      w='fit-content'
+      role='group'
+      pos='relative'
+      {...props}
+    >
       <Button
         bgColor='black'
         color='var(--primary)'
@@ -12,7 +18,6 @@ function Btn(props) {
         borderRadius='none'
         display='flex'
         alignContent='center'
-        {...props}
         w='fit-content'
         transition='all .3s'
         _groupHover={{

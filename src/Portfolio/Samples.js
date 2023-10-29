@@ -2,6 +2,7 @@ import { Box, Center, Grid, Heading, Text, VStack } from "@chakra-ui/react";
 import Highlighted from "../Shared/Highlighted";
 import Btn from "../Shared/Btn";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 function Samples() {
   const samples = [
     { title: "Gassy", text: "", img: "/Gassy" },
@@ -43,7 +44,7 @@ function Samples() {
         })}
       </VStack>
       <Center mt='56px'>
-        <Btn>
+        <Btn as={Link} to='/portfolio'>
           View my portfolio <ArrowForwardIcon />
         </Btn>
       </Center>
