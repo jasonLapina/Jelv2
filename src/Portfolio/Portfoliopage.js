@@ -12,6 +12,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import ClientsMarquee from "./ClientsMarquee";
 function Portfoliopage() {
   const [modalImg, setModalImg] = useState("");
   const [modalSize, setModalSize] = useState("xl");
@@ -164,6 +165,8 @@ function Portfoliopage() {
             ))}
           </Grid>
         </Box>
+
+        <ClientsMarquee />
       </Box>
     </>
   );
