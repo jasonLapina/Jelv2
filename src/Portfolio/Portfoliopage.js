@@ -10,9 +10,13 @@ import {
   ModalContent,
   ModalBody,
   Button,
+  Center,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import ClientsMarquee from "./ClientsMarquee";
+import { Link } from "react-router-dom";
+import Contact from "../Home/Contact";
+
 function Portfoliopage() {
   const [modalImg, setModalImg] = useState("");
   const [modalSize, setModalSize] = useState("xl");
@@ -33,7 +37,7 @@ function Portfoliopage() {
   ];
   return (
     <>
-      <Modal size={modalSize} isOpen={isOpen} onClose={onClose}>
+      <Modal isCentered size={modalSize} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalBody>
@@ -41,7 +45,7 @@ function Portfoliopage() {
           </ModalBody>
         </ModalContent>
       </Modal>
-      <Box pb='80px'>
+      <Box>
         <Text opacity='.6' fontSize='24px' mb='40px' textAlign='center'>
           Portfolio showcase
         </Text>
@@ -81,6 +85,7 @@ function Portfoliopage() {
                   src={`/${s}.jpg`}
                   _groupHover={{ filter: "brightness(.4)" }}
                   transition='all .3s'
+                  loading='lazy'
                 />
                 <Button
                   pos='absolute'
@@ -142,6 +147,7 @@ function Portfoliopage() {
                   _groupHover={{ filter: "brightness(.4)" }}
                   transition='all .3s'
                   h='100%'
+                  loading='lazy'
                 />
                 <Button
                   pos='absolute'
@@ -167,6 +173,7 @@ function Portfoliopage() {
         </Box>
 
         <ClientsMarquee />
+        <Contact />
       </Box>
     </>
   );

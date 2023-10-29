@@ -1,7 +1,13 @@
 import { Box } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import { useEffect } from "react";
 function Layout() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    console.log(pathname);
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
   return (
     <>
       <Navbar />

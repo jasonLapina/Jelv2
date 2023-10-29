@@ -16,7 +16,7 @@ function ClientsMarquee() {
     "supervibe.webp",
   ];
   return (
-    <Box textAlign='center' mt='120px'>
+    <Box textAlign='center' mt='120px' mb='40px'>
       <Heading textAlign='center' fontWeight='semibold' mb='24px'>
         Clients
       </Heading>
@@ -24,11 +24,16 @@ function ClientsMarquee() {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis,
         optio ad dignissimos asperiores id vel mollitia beatae
       </Text>
-      <Marquee gradient autoFill>
+      <Box
+        as={Marquee}
+        bgImage='linear-gradient(to bottom, white 50%, rgba(0, 0, 0,.1))'
+        gradient
+        autoFill
+      >
         {clients.map((client) => (
           <Image mx='40px' w='80px' src={`/client-logos/${client}`} />
         ))}
-      </Marquee>
+      </Box>
     </Box>
   );
 }
