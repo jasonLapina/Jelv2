@@ -72,7 +72,7 @@ function Portfoliopage() {
                   setModalImg(s);
                   onOpen();
                 }}
-                boxShadow='8px 8px yellow'
+                boxShadow='0px 4px 12px #333333'
                 pos='relative'
                 role='group'
               >
@@ -115,16 +115,14 @@ function Portfoliopage() {
           <Grid
             columnGap='16px'
             rowGap='32px'
-            gridTemplateColumns='1fr 1fr'
+            gridTemplateColumns='repeat(4,1fr)'
             justifyItems='center'
             justifyContent='center'
             mt='40px'
-            px='120px'
           >
             {results.map((r) => (
               <Box
                 cursor='pointer'
-                maxH='600px'
                 overflow='hidden'
                 borderRadius='10px'
                 maxW='400px'
@@ -134,9 +132,9 @@ function Portfoliopage() {
                   setModalImg(r);
                   onOpen();
                 }}
-                boxShadow='8px 8px yellow'
                 pos='relative'
                 role='group'
+                boxShadow='0px 4px 12px #333333'
               >
                 <Image
                   src={`/${r}.jpg`}
